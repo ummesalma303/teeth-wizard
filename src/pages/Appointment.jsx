@@ -2,18 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { getAppointment, removeAppoint,  } from '../routes/utility';
 
 const Appointment = () => {
-    const [showAppoint,setAppoint]=useState([])
+    const [showAppoint, setAppoint] = useState([])
+    
     useEffect(() => {
         const appointment = getAppointment()
         setAppoint(appointment)
     }, [])
+
     const handleRemoveAppoint = (email) => {
-        // console.log(202)
-        const remove = removeAppoint(email)
+        removeAppoint(email)
+        // console.log( removeAppoint)
+        // console.log(remove)
+        // console.log(removeAppoint(email))
         // console.log(email)
-        console.log(remove)
+        // console.log(remove)
     }
-    // console.log(showAppoint.length)
     return (
         <div>
             <h2 className='text-xl font-bold'>Total Appointment: {showAppoint.length}</h2>
