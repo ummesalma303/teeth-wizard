@@ -10,11 +10,12 @@ const Navbar = () => {
             <ul className='flex space-x-6'>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/allTreatment'>All Treatment</NavLink>
+                <NavLink to='/appointment'>My Appointment</NavLink>
                 <NavLink to='/profile'>Profile</NavLink>
 
             </ul>
             <div>
-                <h2>profile</h2>
+                <h2>Login</h2>
             </div>
         </nav>
     );

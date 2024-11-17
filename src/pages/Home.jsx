@@ -9,7 +9,6 @@ import Feedback from '../components/Feedback';
 const Home = () => {
     const services = useLoaderData();
     const {serviceData, feedbackData}=services
-    console.log(services);
     return (
         <div>
            <Banner></Banner>
@@ -22,7 +21,7 @@ const Home = () => {
 
            <div className='my-12'>
             <h2 className='text-center text-2xl font-bold'>Client Feedback</h2>
-            <div  className='grid grid-cols-2 my-6 gap-20'>
+            <div  className='grid md:grid-cols-2 my-6 gap-20'>
                 {
                     feedbackData.map(feedback=><Feedback key={feedback.reviewId} feedback={feedback}></Feedback>)
                 }
