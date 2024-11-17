@@ -17,12 +17,10 @@ const setAppointment = (data) => {
 }
 
 const removeAppoint = email => {
-    // console.log(email)
     const appointment = getAppointment()
-    // console.log(appointment)
-    // console.log(appointment)
-    const remaining = appointment.filter(appoint => console.log(appoint?.email) != email)
+    const remaining = appointment.filter(appoint => appoint.email !== email)
     localStorage.setItem("appointment",JSON.stringify(remaining))
     console.log(remaining)
 }
+
 export {setAppointment,getAppointment,removeAppoint}

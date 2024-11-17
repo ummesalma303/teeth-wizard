@@ -5,6 +5,7 @@ import AllTreatment from "../pages/AllTreatment";
 import Profile from "../pages/Profile";
 import Details from "../pages/Details";
 import Appointment from "../pages/Appointment";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             path:'/appointment',
             element:<Appointment></Appointment>
         },
+        {
+          path:'/register',
+          element:<Register></Register>
+      },
         {
             path:'/profile',
             element:<Profile></Profile>

@@ -11,11 +11,8 @@ const Appointment = () => {
 
     const handleRemoveAppoint = (email) => {
         removeAppoint(email)
-        // console.log( removeAppoint)
-        // console.log(remove)
-        // console.log(removeAppoint(email))
-        // console.log(email)
-        // console.log(remove)
+        const items= getAppointment()
+        setAppoint(items)
     }
     return (
         <div>

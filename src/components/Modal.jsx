@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { setAppointment } from '../routes/utility';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Modal = () => {
+  const {user}=useContext(AuthContext)
+
+  const  navigate=useNavigate()
     const handleForm = e => {
         e.preventDefault()
         const fName = e.target.fName.value
@@ -9,13 +14,14 @@ const Modal = () => {
         const email = e.target.email.value
         const phone = e.target.phone.value
         const address = e.target.address.value
-        console.log(fName, lName, address, phone, email)
+        // console.log(fName, lName, address, phone, email)
 
         const storageInfo = {
             fName,lName,email,phone,address
         }
-        setAppointment(storageInfo)
-        
+         setAppointment(storageInfo)
+        navigate('/appointment')
+
     }
     
     return (
@@ -40,7 +46,7 @@ const Modal = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+          <input type="email" name='email' value={ user} className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
