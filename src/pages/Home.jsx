@@ -10,7 +10,7 @@ const Home = () => {
     const services = useLoaderData();
     const {serviceData, feedbackData}=services
     return (
-        <div>
+        <div className='bg-white'>
            <Banner></Banner>
            <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 my-10'>
             {

@@ -6,7 +6,7 @@ const Details = () => {
   const { treatment, description, cost, image } = useLoaderData();
   // console.log(data)
   return (
-    <div>
+    <div className="bg-white">
       <div
         className="hero min-h-screen"
         style={{
